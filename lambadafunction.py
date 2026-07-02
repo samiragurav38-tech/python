@@ -1,5 +1,6 @@
 add = lambda a,b:a+b
 print(add(10,20))
+print(max(10,20))
 
 numbers= [10,55,40,23,50]
 squares=list(map(lambda x:x*x,numbers))
@@ -17,4 +18,5 @@ print(math.pi)
 
 from math import sqrt
 print(sqrt(45))
+
 
