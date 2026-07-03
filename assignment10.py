@@ -17,6 +17,4 @@ class ShoppingCart():
 c =ShoppingCart("laptop",2,50000)
 c.DisplayBill()
 
-
-
     
