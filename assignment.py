@@ -12,6 +12,8 @@ for num in numbers:
        print(num,"is a prime number.")
     else:
         print(num,"is a not prime number.")
+print("----------") 
+
 
 # fibonacci 
 def fibonacci(n):
@@ -21,26 +23,58 @@ def fibonacci(n):
         a, b = b, a + b
 N = int(input("Enter N: "))
 fibonacci(N)
-    
-# palindrome
-
-def palindrome(x):
-   s=str(x).lower()
-   return s==s[::-1]
-number=input("Enter number:")
-text=input("Enter string:")
-print(f"{number} -> {'Palindrome' if palindrome(number)else'Not palindrome'}")
-print(f"{text} -> {'palindrome'if palindrome(text)else'Not palindrome'}")   
+print()
 
 
-# squaers,cube
-numbers2= [1,2,3,4,5]
-squares=list(map(lambda x:x*x,numbers2))
-print(squares)
+
+# palindromes
+def is_palindrome(value):
+    value = str(value)
+
+    if value == value[::-1]:
+        return "Palindrome"
+    else:
+        return "Not Palindrome"
+print("121 ->", is_palindrome(121))
+print("123 ->", is_palindrome(123))
+print("madam ->", is_palindrome("madam"))
+print("hello ->", is_palindrome("hello"))
+print("----------") 
 
 
-cube=list(map(lambda x:x**3,numbers2))
-print(cube)
+#Armstrong Number
+def is_armstrong(num):
+    digits = len(str(num))
+    total = sum(int(digit) ** digits for digit in str(num))
+
+    return total == num
+
+numbers = [153, 370, 123]
+
+for n in numbers:
+    if is_armstrong(n):
+        print(f"{n} is an Armstrong Number")
+    else:
+        print(f"{n} is Not an Armstrong Number")
+print("----------") 
+
+
+#Lambda function squaers,cube
+square = lambda x: x ** 2
+
+cube = lambda x: x ** 3
+
+maximum = lambda a, b: a if a > b else b
+
+even_odd = lambda n: "Even" if n % 2 == 0 else "Odd"
+
+c_to_f = lambda c: (c * 9/5) + 32
+
+print("Square of 5:", square(5))
+print("Cube of 3:", cube(3))
+print("Maximum of 10 and 20:", maximum(10, 20))
+print("7 is", even_odd(7))
+print("25°C =", c_to_f(25), "°F")
 
 
 
